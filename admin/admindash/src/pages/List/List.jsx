@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './List.css'
 import axios from 'axios'
 import { toast } from 'react-toastify'
+import Navbar from '../../components/Navbar/Navbar'
+import Sidebar from '../../components/sidebar/Sidebar'
 
 const List = () => {
 
@@ -53,6 +55,11 @@ const List = () => {
 
 
   return (
+    <div>
+    <Navbar/>
+    <hr />
+      <div className="app-content">
+        <Sidebar/>
     <div className='list add flex-col'>
       <p>All Item List</p>
       <div className="list-table">
@@ -75,6 +82,8 @@ const List = () => {
           )
         })}
       </div>
+      </div>
+    </div>
 
     </div>
   )
