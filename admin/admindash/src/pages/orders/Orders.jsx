@@ -3,6 +3,8 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { assets } from '../../../../../frontend/src/assets/assets';
 import './Orders.css'; // Ensure you have styles for the classes
+import Navbar from '../../components/Navbar/Navbar';
+import Sidebar from '../../components/sidebar/Sidebar';
 
 const Orders = ({ url }) => {
   const [orders, setorder] = useState([]);
@@ -38,6 +40,10 @@ const Orders = ({ url }) => {
 
   return (
     <div>
+    <Navbar/>
+    <hr />
+      <div className="app-content">
+        <Sidebar/>
       <div className="order add">
         <h3>Order Page</h3>
         <div className="order-list">
@@ -74,6 +80,7 @@ const Orders = ({ url }) => {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 };
