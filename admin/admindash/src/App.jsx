@@ -8,7 +8,6 @@ import Orders from './pages/orders/Orders';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AdminLogin from './components/AdminLogin/AdminLogin';
-import ProtectedRoute from './components/Auth/ProtectedRoute';
 
 const App = () => {
   return (
